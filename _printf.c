@@ -7,6 +7,7 @@
  * @list: list of arguments to print
  * Return: numb of char to be printed
  */
+
 int print_op(const char *format, fmt_t *print_arr, va_list list)
 {
 	char a;
