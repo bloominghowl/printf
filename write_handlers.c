@@ -43,7 +43,6 @@ int handle_write_char(char c, char buffer[],
 
 	return (write(1, &buffer[0], 1));
 }
-
 /************************* WRITE NUMBER *************************/
 /**
  * write_number - Prints a string
@@ -58,7 +57,7 @@ int handle_write_char(char c, char buffer[],
  * Return: Number of chars printed.
  */
 int write_number(int is_negative, int ind, char buffer[],
-	int flags, int width, int precision, int size)
+int flags, int width, int precision, int size)
 {
 	int length = BUFF_SIZE - ind - 1;
 	char padd = ' ', extra_ch = 0;
@@ -77,7 +76,6 @@ int write_number(int is_negative, int ind, char buffer[],
 	return (write_num(ind, buffer, flags, width, precision,
 		length, padd, extra_ch));
 }
-
 /**
  * write_num - Write a number using a bufffer
  * @ind: Index at which the number starts on the buffer
@@ -136,7 +134,6 @@ int write_num(int ind, char buffer[],
 		buffer[--ind] = extra_c;
 	return (write(1, &buffer[ind], length));
 }
-
 /**
  * write_unsgnd - Writes an unsigned number
  * @is_negative: Number indicating if the num is negative
@@ -198,7 +195,7 @@ int write_unsgnd(int is_negative, int ind,
 /**
  * write_pointer - Write a memory address
  * @buffer: Arrays of chars
- * @ind: Index at which the number starts in the buffer
+* @ind: Index at which the number starts in the buffer
  * @length: Length of number
  * @width: Wwidth specifier
  * @flags: Flags specifier
