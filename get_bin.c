@@ -5,6 +5,7 @@
  * @bin: list being passed
  * Return: updated count return
  */
+
 int _bin(va_list bin)
 {
 	int count = 0, i;
